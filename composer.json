@@ -1,0 +1,40 @@
+{
+    "name": "it-devgroup/laravel-entity-file-table",
+    "description": "laravel entity file table",
+    "type": "library",
+    "version": "1.0.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gavoronok30",
+            "email": "gavoronok30@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "IT Dev Group",
+            "email": "info@it-devgroup.com",
+            "role": "Provider"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "lumen",
+        "file",
+        "it-devgroup"
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^7.0|^8.0",
+        "illuminate/database": "^7.0|^8.0",
+        "illuminate/http": "^7.0|^8.0",
+        "nesbot/carbon": "^1.0|^2.0",
+        "illuminate/collections": "^7.0|^8.0",
+        "league/flysystem": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "ItDevgroup\\LaravelEntityFileTable\\": "src/"
+        }
+    }
+}
