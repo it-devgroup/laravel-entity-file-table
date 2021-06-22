@@ -2,6 +2,7 @@
 
 namespace ItDevgroup\LaravelEntityFileTable;
 
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Http\UploadedFile;
 
 /**
@@ -51,6 +52,7 @@ class FileData
      * @param UploadedFile $file
      * @param string|null $title
      * @return self
+     * @noinspection PhpDocMissingThrowsInspection
      */
     public static function fromUploadFile(UploadedFile $file, ?string $title = null): self
     {
@@ -61,7 +63,7 @@ class FileData
             ->setExtension($file->extension())
             ->setMimeType($file->getMimeType())
             ->setHashSum($file->getRealPath())
-            ->setResource($file->tempFile);
+            ->setResource($file->get());
     }
 
     /**
