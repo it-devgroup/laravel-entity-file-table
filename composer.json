@@ -2,7 +2,7 @@
     "name": "it-devgroup/laravel-entity-file-table",
     "description": "laravel entity file table",
     "type": "library",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "license": "MIT",
     "authors": [
         {
@@ -23,7 +23,7 @@
         "it-devgroup"
     ],
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^7.4|^8.0|^8.1|^8.2",
         "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
         "illuminate/database": "^7.0|^8.0|^9.0|^10.0",
         "illuminate/http": "^7.0|^8.0|^9.0|^10.0",
