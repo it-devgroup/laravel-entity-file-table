@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Schema;
 /**
  * Class CreateFiles
  */
-class CreateFiles extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -44,4 +43,4 @@ class CreateFiles extends Migration
     {
         Schema::dropIfExists('{{TABLE_NAME}}');
     }
-}
+};

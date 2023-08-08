@@ -5,6 +5,7 @@ namespace ItDevgroup\LaravelEntityFileTable\Model;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Support\Facades\Config;
 
 /**
  * Class FileModel
@@ -26,18 +27,14 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 class FileModel extends Model
 {
     /**
-     * @var string
-     */
-    protected $table = 'files';
-    /**
-     * @var array
+     * @inheritdoc
      */
     protected $dates = [
         'created_at',
         'updated_at',
     ];
     /**
-     * @var array
+     * @inheritdoc
      */
     protected $casts = [
         'size' => 'int',
@@ -46,6 +43,16 @@ class FileModel extends Model
      * @var mixed
      */
     public $resource = null;
+
+    /**
+     * @param array $attributes
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->table = Config::get('entity_file_table.table');
+
+        parent::__construct($attributes);
+    }
 
     /**
      * @return MorphTo

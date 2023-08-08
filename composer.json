@@ -2,7 +2,7 @@
     "name": "it-devgroup/laravel-entity-file-table",
     "description": "laravel entity file table",
     "type": "library",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "license": "MIT",
     "authors": [
         {
@@ -18,23 +18,30 @@
     ],
     "keywords": [
         "laravel",
-        "lumen",
         "file",
+        "image",
         "it-devgroup"
     ],
     "require": {
-        "php": "^7.4|^8.0|^8.1|^8.2",
-        "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
-        "illuminate/database": "^7.0|^8.0|^9.0|^10.0",
-        "illuminate/http": "^7.0|^8.0|^9.0|^10.0",
-        "nesbot/carbon": "^1.0|^2.0",
-        "illuminate/collections": "^7.0|^8.0|^9.0|^10.0",
-        "league/flysystem": "^1.0|^2.0|^3.0"
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0",
+        "illuminate/database": "^9.0|^10.0",
+        "illuminate/http": "^9.0|^10.0",
+        "nesbot/carbon": "^2.0",
+        "illuminate/collections": "^9.0|^10.0",
+        "league/flysystem": "^3.0"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "ItDevgroup\\LaravelEntityFileTable\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ItDevgroup\\LaravelEntityFileTable\\Providers\\EntityFileTableServiceProvider"
+            ]
         }
     }
 }

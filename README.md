@@ -1,48 +1,7 @@
 ## 
-## Install for Lumen
-
-**1.** Uncommented strings
-
-```
-$app->withFacades();
-$app->withEloquent();
-```
-
-Added after **$app->configure('app');**
-
-```
-$app->configure('entity_file_table');
-```
-
-Open file `bootstrap/app.php` and add new service provider
-
-```
-$app->register(\ItDevgroup\LaravelEntityFileTable\Providers\EntityFileTableServiceProvider::class);
-```
-
-**2.** Run commands
-
-For creating config file
-
-```
-php artisan entity:file:table:publish --tag=config
-```
-
-For creating migration file
-
-```
-php artisan entity:file:table:publish --tag=migration
-```
-
-For generate table
-
-```
-php artisan migrate
-```
-
 ## Install for laravel
 
-**1.** Open file **config/app.php** and search
+**1.** Open file **config/app.php** and search (optional, using laravel discovered package system by default)
 
 ```
     'providers' => [
@@ -156,7 +115,7 @@ Create custom lexicon file
 
 Example:
 
-File: **resources/lang/en/entity_file_table.php**
+File: **lang/en/entity_file_table.php**
 
 Content:
 
